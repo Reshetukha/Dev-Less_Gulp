@@ -1,0 +1,9 @@
+[ Organisation ]
+
+https://support.google.com/webmasters/answer/146861?hl=ru&ref_topic=4624916
+
+1)Обязательное свойство name
+
+2)В первой строке <itemscope itemtype="http://www.data-vocabulary.org/Organization"> указывает, что HTML-код в теге <div> представляет элемент. <itemscope> указывает, что содержание <div> описывает элемент, а itemtype="http://www.data-vocabulary.org/Organization" указывает, что этот элемент является компанией.
+
+3)Свойство может состоять из другого элемента (иначе говоря, элемент может содержать другие элементы). Например, информация об организации выше включает адрес (itemtype="http://www.data-vocabulary.org/Address") со свойствами street-address, locality и region.

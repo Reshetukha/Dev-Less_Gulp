@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@import "core/rst.css";
+@import "core/def.css";
+@import "styles.css";
+@import "editor_styles.css";
+@import "struct.css";
+
+/* Для великих екранів */
+@import url(media/min1200.css) only screen and (min-width: 1200px);
+/* Для деяких видів нетбуків та планшеток (таблеток) */
+@import url(media/min768max979.css) only screen and (min-width: 768px) and (max-width: 979px);
+/* Для планшетів та деяких видів телефонів */
+@import url(media/max767.css) only screen and (max-width: 767px);
+/* Для телефонів */
+@import url(media/max480.css) only screen and (max-width: 480px);

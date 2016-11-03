@@ -1,0 +1,13 @@
+[ Person ]
+
+https://support.google.com/webmasters/answer/146646?hl=ru
+
+1)Обязательное свойство name
+
+2)Кроме того, должны присутствовать как минимум два из следующих компонентов:
+    title или role
+    affiliation (org)
+    address
+3)Свойство может состоять из другого элемента (проще говоря, элемент может содержать другие элементы). В примере выше сведения о человеке включают адрес (itemtype="http://www.data-vocabulary.org/Address") с характеристиками locality и region. 
+
+

@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "core/rst.css";
+@import "core/def.css";
+@import "styles.css";
+@import "editor_styles.css";
+@import "struct.css";
+
+/* Smartphones (portrait and landscape) ----------- */
+@import url(./media-full/min320max480.css) only screen and (min-device-width: 320px) and (max-device-width: 480px);
+/* Smartphones (landscape) ----------- */
+@import url(./media-full/min321.css) only screen and (min-width: 321px);
+/* Smartphones (portrait) ----------- */
+@import url(./media-full/max320.css) only screen and (max-width: 320px);
+/* iPads (portrait and landscape) ----------- */
+@import url(./media-full/min768max1024pl.css) only screen and (min-device-width: 768px) and (max-device-width: 1024px);
+/* iPads (landscape) ----------- */
+@import url(./media-full/min768max1024l.css) only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape);
+/* iPads (portrait) ----------- */
+@import url(./media-full/min768max1024p.css) only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait);
+/* Desktops and laptops ----------- */
+@import url(./media-full/min1224.css) only screen and (min-width: 1224px);
+/* Large screens ----------- */
+@import url(./media-full/min1824.css) only screen and (min-width: 1824px);
+/* iPhone 4 ----------- */
+@import url(./media-full/iphone4.css) only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5);

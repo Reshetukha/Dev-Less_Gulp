@@ -1,0 +1,123 @@
+/* 
+    Created on : Jun 23, 2015, 6:53:38 PM
+    Author     : Ruslana Gorbachuk
+*/
+/*************************************************************************************************************************************
+                                                        SEPARATE SIMPLE MIXINS
+**************************************************************************************************************************************/
+//@descr: set display:flex (SET TO PARENT ELEMENT )
+@mixin flexbox()
+{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    display: flexbox;  //2011 hybrid syntax
+    display: box;      //2009 syntax
+}
+//@descr: set orientation of child elements (SET TO PARENT ELEMENT )
+@mixin flex-direction($orient)
+{
+    flex-direction: $orient;
+    -webkit-flex-direction: $orient;
+    -ms-flex-direction: $orient;
+}
+//@descr: horizontal align fot children of flex element (SET TO PARENT ELEMENT )
+@mixin flex-justify-content($spaceflex)
+{
+    -webkit-justify-content: $spaceflex;
+    -moz-justify-content: $spaceflex;
+    -ms-justify-content: $spaceflex;
+    justify-content: $spaceflex;
+    
+    -ms-box-pack: $spaceflex;  //2011 hybrid syntax - use start instead of flex-start
+}
+
+//@descr: vertical align for children of flex element (SET TO PARENT ELEMENT )
+@mixin flex-align-items($position)
+{
+    -moz-box-align: $position;
+    -ms-box-align: $position;
+    -webkit-box-align: $position;
+    align-items: $position;
+    
+    -ms-box-align: $position; //2011 hybrid syntax - use start instead of flex-start
+}
+//@descr:
+@mixin flex-align-self($position)
+{
+  -webkit-align-self: $position;
+  -ms-flex-item-align: $position;
+  align-self: $position;
+}
+
+
+//@descr: align for children of flex element (SET TO PARENT ELEMENT )
+//aligns a flex container's lines within when there is extra space in the cross-axis,
+// similar to how justify-content aligns individual items within the main-axis.
+@mixin flex-align-content($position)
+{
+   -webkit-align-content: $position;
+   -moz-align-content: $position;
+   -ms-align-content: $position;
+   align-content: $position;
+}
+//@descr: Let all the flexible items be the same length, regardles of its content and height 100% (SET TO CHILD ELEMENT)
+//NOT WORKING IN FF YET
+@mixin flex($item-grow:1, $item-shrink:100%, $item-basis: auto )
+{
+    -webkit-flex: $item-grow $item-shrink $item-basis; /* Safari 6.1+ */
+    -moz-flex: $item-grow $item-shrink $item-basis;
+    -ms-flex: $item-grow $item-shrink $item-basis;  /* IE 10 */
+    flex: $item-grow $item-shrink $item-basis;
+}
+
+//@descr: It is a shorthand for flex-direction and flex-wrap (SET TO PARENT ELEMENT ) 
+@mixin flex-flow($flex-direction:row, $flex-wrap:wrap)
+{
+    -webkit-flex-flow: $flex-direction $flex-wrap;
+    -moz-flex-flow: $flex-direction $flex-wrap;
+    -ms-flex-flow: $flex-direction $flex-wrap;
+    flex-flow: $flex-direction $flex-wrap;
+}
+
+/*************************************************************************************************************************************
+                                                        COMPLEX MIXINS
+**************************************************************************************************************************************/
+//@descr: align items in a row (SET TO PARENT ELEMENT )
+@mixin flex-row-items($align-horizontal)
+  //@align items in a row can be: flex-start, flex-end, center, space-between, space-around
+{
+  @include flexbox();
+  @include flex-flow(row, wrap);
+  @include flex-justify-content($align-horizontal);
+  
+}
+@mixin flex-row-items-align($align-horizontal, $align-vertical)  //???????????when do not work
+ {
+  @include flexbox();
+  @include flex-flow(row, wrap);
+  @include flex-justify-content($align-horizontal);
+  @include flex-align-items($align-vertical);
+}
+
+
+//@descr: align items in a column (SET TO PARENT ELEMENT )
+@mixin flex-column-items($align)
+  //@align items in column can be: flex-start, flex-end, center, stretch, baseline
+{
+  @include flexbox();
+  @include flex-flow(column, wrap);
+  @include flex-align-items($align);
+}
+@mixin flex-column-items-align($align-vertical, $align-horizontal)   
+{
+  @include flexbox();
+  @include flex-flow(column, wrap);
+  @include flex-align-items($align-vertical);
+  @include flex-justify-content($align-horizontal);
+}
+
+
+

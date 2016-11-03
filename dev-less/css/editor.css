@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import "core/rst.css";
+@import "core/def.css";
+@import "styles.css";
+BODY{
+	position: relative;
+	height: auto !important;
+	height: 100%;
+	font:13px/1.33 Arial, Helvetica, sans-serif;
+}
+@import "editor_styles.css";

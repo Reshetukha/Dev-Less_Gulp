@@ -1,0 +1,321 @@
+//--------------------------------*/
+//міксіни за замовчуванням
+//ver        : 03.08.2014
+//Author     : Filament
+//--------------------------------*/
+    //налашутвання
+//@descr: змінює розрахунок ширини та висоти елемента
+//@descr: border-box при розрахунку width и height включає (width або height) + padding + border
+.box-sizing(@sizing: border-box)
+{
+    -ms-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    -webkit-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+//@descr: центрування блочного елементу
+.center-block()
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+//@descr: для встановлення адаптивності зображень від базового розміру
+.img_adaptive(@w){
+    max-width: @w;
+    width: 100%;
+    height: auto;
+}
+//@descr: надає прозорість елементу
+.opacity(@opacity: 0.5)
+{
+    -moz-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    -webkit-opacity: @opacity;
+    opacity: @opacity;
+    @opperc: @opacity * 100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+    filter: ~"alpha(opacity=@{opperc})";
+}
+//@descr: встановлення розміру блоку
+.size(@width; @height)
+{
+    width: @width;
+    height: @height;
+}
+//@descr: встановлення розміру квадратного блоку
+.square(@size)
+{
+    .size(@size; @size);
+}
+//@descr: встановлює перенос слів, які не вміщаються в заданий блок по ширині
+.word-wrap()
+{
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+//@descr: три точки при розриві тексту, що не вміщуться в задану ширину блоку
+.text-overflow() {
+   overflow: hidden;
+   white-white-space: nowrap;
+   text-overflow: ellipsis;
+   -o-text-overflow: ellipsis;
+}
+    //фон та межі
+//@descr: повна межа
+.border(@width: 1px, @type: solid, @color: #EEE)
+{
+    border: @width @type @color;
+}
+//@descr: визначає яким чином має відображатися фонове зображення чи колір під межами елемента
+.background-clip(@argument: padding-box)
+{
+    -moz-background-clip: @argument;
+    -webkit-background-clip: @argument;
+    background-clip: @argument;
+}
+//@descr: маштабує фонове зображення відповідно до заданого параметру
+.background-size(@size: 100%)
+{
+    -moz-background-size: @size; 
+    -webkit-background-size: @size;
+    -o-background-size: @size;
+    background-size: @size;
+}
+//@descr: загальне округлення
+.rounded(@radius: 2px)
+{
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+//@descr: округлення однієї з сторін
+    //@descr: округлення зверху
+.border-top-radius(@radius)
+{
+    border-top-right-radius: @radius;
+    border-top-left-radius: @radius;
+}
+    //@descr: округлення зправа
+.border-right-radius(@radius)
+{
+    border-bottom-right-radius: @radius;
+    border-top-right-radius: @radius;
+}
+    //@descr: округлення знизу
+.border-bottom-radius(@radius)
+{
+    border-bottom-right-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+    //@descr: округлення зліва
+.border-left-radius(@radius)
+{
+    border-bottom-left-radius: @radius;
+    border-top-left-radius: @radius;
+}
+//@descr: вибіркове округлення
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0)
+{
+    -webkit-border-top-right-radius: @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius: @bottomleft;
+    -webkit-border-top-left-radius: @topleft;
+    -moz-border-radius-topright: @topright;
+    -moz-border-radius-bottomright: @bottomright;
+    -moz-border-radius-bottomleft: @bottomleft;
+    -moz-border-radius-topleft: @topleft;
+    border-top-right-radius: @topright;
+    border-bottom-right-radius: @bottomright;
+    border-bottom-left-radius: @bottomleft;
+    border-top-left-radius: @topleft;
+    .background-clip(padding-box);
+}
+//@descr: зовнішня тінь
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1)
+{
+    -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+//@descr: внутрішня тінь
+.inner-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.4)
+{
+    -webkit-box-shadow: inset @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: inset @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    box-shadow: inset @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+//@descr: подвійна тінь. Водночас зовнішня та внутрішня 
+.box-shadow-double(@arguments1, @arguments2){
+    -webkit-box-shadow: @arguments1, @arguments2;
+    -moz-box-shadow: @arguments1, @arguments2;
+    box-shadow: @arguments1, @arguments2;
+}
+//@descr: тінь
+.box-shadow(...)
+{
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+    //градієнт
+//@descr: вертикальний градієнт
+.gradient-vertical(@color: #F5F5F5; @start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%)
+{
+    background-color: @color;
+    background-image: -webkit-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Safari 5.1-6, Chrome 10+
+    background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down
+}
+//@descr: горизонтальний градієнт
+.gradient-horizontal(@color: #F5F5F5; @start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%)
+{
+    background-color: @color;
+    background-image: -webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)); // Safari 5.1-6, Chrome 10+
+    background-image:  linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
+}
+    //елементи форми
+//@descr: Placeholder text
+.placeholder(@color: @input-color-placeholder)
+{
+    &::-moz-placeholder{
+        color: @color; opacity: 1;
+    }
+    &:-ms-input-placeholder{
+        color: @color;
+    }
+    &::-webkit-input-placeholder{
+        color: @color;
+    }
+}
+    //трансормація елементів
+//@descr: час зміни анімації елемента
+.transition-duration(@duration: 0.2s)
+{
+    -moz-transition-duration: @duration;
+    -webkit-transition-duration: @duration;
+    -o-transition-duration: @duration;
+    transition-duration: @duration;
+}
+//@descr: трансформуе елемент
+.transform(...)
+{
+    -webkit-transform: @arguments;
+    -moz-transform: @arguments;
+    -o-transform: @arguments;
+    -ms-transform: @arguments;
+    transform: @arguments;
+}
+//@descr: повертае елемент на заданий кут
+.rotation(@deg:5deg)
+{
+  .transform(rotate(@deg));
+}
+//@descr: змінює масштаб елемента
+.scale(@ratio:1.5)
+{
+    .transform(scale(@ratio));
+}
+//накладає ефект анімації на єлемент
+.transition(@duration:0.2s, @ease:ease-out)
+{
+    -webkit-transition: all @duration @ease;
+    -moz-transition: all @duration @ease;
+    -o-transition: all @duration @ease;
+    transition: all @duration @ease;
+}
+//@descr: 
+.translate(@x:0, @y:0)
+{
+    .transform(translate(@x, @y));
+}
+//@descr: керує дозволом на виділення елементів та тексту на сторінці
+//@descr: none користувач не може виділяти текст та вложені елементи
+.user-select(@argument: none)
+{
+    -webkit-user-select: @argument;
+    -moz-user-select: @argument;
+    -ms-user-select: @argument;
+    user-select: @argument;
+}
+//@descr: розбивання контента на стовпчики (колонки)
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px)
+{
+    -moz-column-width: @colwidth;
+    -moz-column-count: @colcount;
+    -moz-column-gap: @colgap;
+    -moz-column-rule-color: @columnRuleColor;
+    -moz-column-rule-style: @columnRuleStyle;
+    -moz-column-rule-width: @columnRuleWidth;
+    -webkit-column-width: @colwidth;
+    -webkit-column-count: @colcount;
+    -webkit-column-gap: @colgap;
+    -webkit-column-rule-color: @columnRuleColor;
+    -webkit-column-rule-style: @columnRuleStyle;
+    -webkit-column-rule-width: @columnRuleWidth;
+    column-width: @colwidth;
+    column-count: @colcount;
+    column-gap: @colgap;
+    column-rule-color: @columnRuleColor;
+    column-rule-style: @columnRuleStyle;
+    column-rule-width: @columnRuleWidth;
+}
+    //форми
+//@descr: надання елементу textarea необхідного розміру, включаючи padding (5px за замовчуванням)
+.textarea(@width, @height, @padding:5px){
+    display: block;	
+    .size(@width, @height);
+    overflow: auto;
+    outline: 0;
+   .box-sizing();
+    padding: @padding;
+}
+//@descr: надання елементу input необхідного розміру. Попередньо вказати display.
+.input(@width, @height){
+     outline: 0;
+    .size(@width, @height);;
+    line-height: @height;
+   .box-sizing();
+}
+    //фільтри
+//@descr: встановлення фільтра на єлемент
+.filter(...)
+{
+    -webkit-filter: @arguments;
+    -moz-filter: @arguments;
+    -ms-filter: @arguments;
+    -o-filter: @arguments;
+    filter: @arguments;
+}
+//@descr: встановлення елементу відтінку чорно-білого
+.grayscale(@grayscale: 0.5)
+{
+    -webkit-filter: grayscale(@grayscale);
+    -moz-filter: grayscale(@grayscale);
+    -ms-filter: grayscale(@grayscale);
+    -o-filter: grayscale(@grayscale);
+    filter: grayscale(@grayscale);
+}
+//@descr: встановлення яскравості елементу
+.brightness(@brightness: 1.0)
+{
+    -webkit-filter: brightness(@brightness);
+    -moz-filter: brightness(@brightness);
+    -ms-filter: brightness(@brightness);
+    -o-filter: brightness(@brightness);
+    filter: brightness(@brightness);
+}
+//@descr: встановлення контрасту елементу
+.contrast(@contrast: 2.0)
+{
+    -webkit-filter: contrast(@contrast);
+    -moz-filter: contrast(@contrast);
+    -ms-filter: contrast(@contrast);
+    -o-filter: contrast(@contrast);
+    filter: contrast(@contrast);
+}

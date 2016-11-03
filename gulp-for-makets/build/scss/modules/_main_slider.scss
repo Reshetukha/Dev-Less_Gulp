@@ -1,0 +1,226 @@
+/* 
+    Created on : Jun 23, 2015, 6:53:38 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+.main-slider-wr{
+    @include box-sizing();
+    margin-bottom: 30px;
+    .figure-list{
+        position: relative;
+        overflow: hidden;
+        .hidden-img-item{
+            @include size(100%, auto);
+            opacity: 0;
+            z-index: -5;
+        }
+        .figure-item{
+            @include box-sizing();
+            @include size(100%, auto);
+            @include triangles(25px 25px 25px 0px, 45%, 100%, transparent #ffffff transparent transparent);
+            position: absolute;
+            top: 0px;
+            z-index: -1;
+            &:before{
+                @include calc(left, "(100% - 25px)"); 
+                @include calc(top, "(50% - 25px)"); 
+            }
+            &:after{
+                @include box-sizing();
+                position: absolute;
+                top: 0px;
+                left: -3px;
+                content: '';
+                display: inline-block;
+                @include size(3px, 100%);
+                border-left: 3px solid #ffffff;
+                z-index: 3;
+            }
+            img{
+                @include size(100%, 100%);
+            }
+            &.current{
+                right: 0px;
+                z-index: 5;
+                
+            }
+            
+            @include tablet{
+                @include triangles(0px 25px 25px 25px, 45%, 100%, transparent transparent #ffffff transparent);
+                position: absolute;
+                &:before{
+                    left: 10%; 
+                    @include calc(top, "(100% - 25px)"); 
+                }
+            }
+        }
+    }
+    .caption-list{
+        position: relative;
+        @include triangles(25px 25px 25px 0px, 100%, -25px, transparent #ffffff transparent transparent);
+            &:before{
+                z-index: 100;
+                @include calc(top, "(50% - 25px)"); 
+            }
+        .caption-list-wr{
+            position: relative;
+            .caption-item{
+                @include flex-row-items-align(flex-start, flex-start);
+                @include box-sizing();
+                @include size(100%, auto);
+                padding: 55px 20px 20px 55px;
+                position: absolute;
+                top: 0px;
+                z-index: -10;
+                background-color: #ffffff;
+                &.current{
+                    right: 0px;
+                    z-index: 5;
+                }
+                
+                @include mddesktop{
+                    padding: 55px 20px 20px 35px;
+                }
+                @include mobile{
+                    padding: 30px 0px 0px 10px;
+                }
+                .article-lang{
+                    margin-bottom: 20px;
+                    @include mddesktop{
+                         margin-bottom: 10px;
+                    }
+                    @include tablet{
+                        margin-bottom: 20px;
+                    }
+                }
+                .article-date{
+                    display: inline-block;
+                    @include box-sizing();
+                    max-width: 185px;
+                    position: relative;
+                    padding-right: 30px;
+                    @include tablet{
+                        max-width: 185px;
+                    }
+                    @include mobile{
+                      //margin-top: 50px;
+                    }
+                    time{
+                        display: inline-block;
+                        @include box-sizing();
+                        @include size(100%, auto);
+                    }
+                    .day{
+                        display: block;
+                        color: $pink-font-color;
+                        font-size: 180px;
+                        line-height: 105px;
+                        font-weight: bold;
+                        font-family: 'MyriadPro-Bold', sans-serif;
+                        letter-spacing: -15px;
+                        margin-left: -18px;
+                        @include mobile{
+                            font-size: 150px;
+                            line-height: 88px;
+                        }
+                    }
+                    .month{
+                        display: inline-block;
+                        padding: 7px 5px 5px 5px;
+                        position: absolute;
+                        bottom: -4px;
+                        right: 10px;
+                        font: 600 19px/1 'DINPro-Medium', sans-serif;
+                        text-transform: uppercase;
+                        background-color: #ffffff;
+                        color: $title-font-color;
+                        @include mobile{
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .right-wr{
+                    @include calc(width, "(100% - 185px)"); 
+                    @include box-sizing();
+                    @include mobile{
+                        @include calc(width, "(100% - 150px)");
+                    }
+                    .title{
+                         color: $title-font-color;
+                        .title-link{
+                            text-transform: uppercase;
+                            font: 600 24px/1.2 'DINPro-Medium', sans-serif;
+                            letter-spacing: -0.5px;
+                            color: $title-font-color;
+                            @include mddesktop{
+                                font: 600 19px/1.3 'DINPro-Medium', sans-serif;
+                            }
+                            @include tablet{
+                                font: 600 24px/1.2 'DINPro-Medium', sans-serif;
+                            }
+                            @include smart{
+                                font: 600 19px/1.2 'DINPro-Medium', sans-serif;
+                            }
+                            @include mobile{
+                                font: 600 16px/1.2 'DINPro-Medium', sans-serif;
+                            }
+                        }
+                    }
+                }
+                
+                .lead-header-data{
+                    display: block;
+                    @include box-sizing();
+                    @include size(100%, auto);
+                    padding: 20px 0px;
+                    font: 19px/1.2 'DINPro-Medium', sans-serif;
+                    @include mddesktop{
+                        padding: 10px 0px;
+                    }
+                }
+            }
+            @include tablet{min-height: 350px;}
+        }
+        .slider-controls{
+            position: absolute;
+            right: 0px;
+            bottom: 20px;
+            @include box-sizing();
+            @include size(100%, auto);
+            padding: 20px 20px 20px 55px;
+            @include mddesktop{
+                padding: 10px 20px 10px 20px;
+            }
+            @include tablet{text-align: center;}
+            .counter{
+                display: inline-block;
+                vertical-align: top;
+                font: 600 13px/35px 'DINPro-Medium', sans-serif;
+            }
+            .prev, .next{
+                @include box-sizing();
+                vertical-align: top;
+                display: inline-block;
+                @include size(48px, 35px);
+                background: url("#{$image-sprite}") no-repeat transparent;
+                cursor: pointer;
+            }
+            .prev{
+                background-position:  -284px -65px;
+                padding-right: 30px;
+            }
+            .next{
+                background-position:  -352px -65px;
+                padding-left: 30px;
+            }
+            @include tablet{
+                padding-bottom: 30px;
+                border-bottom: 2px solid $pink-color;
+            }
+        }
+        @include tablet{
+           padding: 0px 30px 10px 30px;
+            
+        }
+    }
+}

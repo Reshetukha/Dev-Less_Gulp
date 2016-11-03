@@ -1,0 +1,27 @@
+.title{
+	display:block;
+	color:#1198ea;
+	font:18px/1.33 Verdana,sans-serif;
+}
+.citate{
+	display:block;
+	padding:27px 0 27px 90px;
+	border-top:4px solid #1198ea;
+	border-bottom:4px solid #1198ea;
+	text-transform:uppercase;
+	font:16px/1.33 Verdana, sans-serif;
+	font-weight:bolder;
+	color:#1198ea;
+	background:url(../pic/citate_mark.png) no-repeat left center;
+}
+.mark{
+	display:block;
+	padding:12px;
+	font-weight:bolder;
+}
+.list{
+	display:block;
+	margin-left:20px;
+	padding:6px 0 6px 5px;
+	border-bottom:1px solid #c6e1f0;
+}

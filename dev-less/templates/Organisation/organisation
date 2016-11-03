@@ -1,0 +1,12 @@
+<div class="organization" itemscope itemtype="http://data-vocabulary.org/Organization"> 
+    <span class="name" itemprop="name">L’Amourita Pizza</span>
+    Адрес: 
+    <span class="adress" itemprop="address" itemscope 
+      itemtype="http://data-vocabulary.org/Address">
+      <span class="street" itemprop="street-address">123 Мэйн-стрит</span>, 
+      <span class="locality" itemprop="locality">Альбукерке</span>, 
+      <span class="region" itemprop="region">Нью-Мексико</span>.
+    </span>
+    Телефон: <span class="phone" itemprop="tel">206-555-1234</span>.
+    <a href="http://www.example.com" itemprop="url">http://pizza.example.com</a>.
+</div>

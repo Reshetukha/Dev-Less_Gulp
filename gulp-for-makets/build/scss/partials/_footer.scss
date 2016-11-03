@@ -1,0 +1,178 @@
+/* 
+    Created on : Jun 23, 2015, 6:53:38 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+.main-footer{
+    @include box-sizing();
+    padding: 15px 15px 20px 15px;
+    .inside-container{
+        @include flex(1, 0, auto);
+        
+    }
+    .right-footer{
+        position: relative;
+        min-height: 200px;
+    }
+    .footer-main-nav{
+        @include box-sizing();
+        @include flex-row-items-align(flex-start, flex-start);
+         .nav-item{
+            flex-basis: 20%;
+             @include mddesktop{
+                flex-basis: 22%;
+            }
+            .title{
+                a{
+                    color: $footer-font-color;
+                    font: 20px/1.3 DINPro-Medium, sans-serif;
+                    &:hover{text-decoration: underline;}
+                }
+                color: $footer-font-color;
+                font: 19px/1.3 DINPro-Medium, sans-serif;
+                &:hover{text-decoration: underline;}
+            }
+            .subnav{
+                .subnav-item{
+                    @include box-sizing();
+                    padding: 10px 50px 10px 0px;
+                    a{
+                        color: $footer-font-color;
+                        font: 14px/1.05 DINPro-Medium, sans-serif;
+                        &:hover{text-decoration: underline;}
+                    }
+                }
+            }
+        }
+        @include tablet{
+            display: none;
+        }
+    }
+    .footer-nav{
+        padding: 10px 0px 15px 0px;
+        .nav-ul{
+            @include box-sizing();
+            @include flex-row-items-align(flex-start, flex-start);
+            @include tablet{
+                @include flex-row-items-align(center, flex-start);
+            }
+            .nav-item{
+                padding: 0px 30px 0px 30px;
+                border-right: 1px solid #ffffff;
+                &:first-child{
+                    padding: 0px 30px 0px 0px;
+                }
+                &:last-child{
+                    border: none;
+                }
+                a{
+                    color: $footer-font-color;
+                    font: 14px/1.05 DINPro-Medium, sans-serif;
+                    &:hover{text-decoration: underline;}
+                }
+                @include tablet{
+                    padding: 0px 10px 0px 10px;
+                    &:first-child{
+                        padding: 0px 10px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        padding: 3px 0px;
+        a{
+            color: $copyright-color;
+            font: 13px DINPro-Medium, sans-serif;
+        }
+        @include tablet{text-align: center;}
+    }
+    .copyright-vipdesign{
+        padding: 3px 0px;
+        color: $copyright-color;
+        font: 13px DINPro-Medium, sans-serif;
+        a{
+            display: inline-block;
+            color: $copyright-color;
+            font: 13px DINPro-Medium, sans-serif;
+            &:hover{text-decoration: underline;}
+            &.vipdesign{&:hover{color: $pink-font-color;}}
+        }
+        @include tablet{text-align: center;}
+    }
+ 
+    .rss-form-wr{
+        @include box-sizing();
+        @include size(100%, 100%);
+        .rss-form{
+            @include box-sizing();
+            @include size(100%, auto);
+            text-align: right;
+            .rss-field{
+                display: inline-block;
+                @include size(80%, 30px);
+                line-height: 30px;
+                @include placeholder{
+                    text-transform: uppercase;
+                    color: $placeholder-color;
+                    font: #{$placeholder-font};
+                }
+                @include mddesktop{
+                    @include size(100%, 30px);
+                }
+            }
+            .rss-submit{
+                display: inline-block;
+                @include size(80%, 33px);
+                margin-top: 20px;
+                @include mddesktop{
+                    @include size(100%, 33px);
+                }
+            }
+        }
+        @include tablet{
+            display: none;
+        }
+    }
+    .eu-logo{
+        flex-basis: 90px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        padding-left: 15%;
+        $img-width: 86px;
+        @include mddesktop{
+            padding-left: 0%;
+        }
+        @include tablet{
+            @include flex-column-items-align(center, center) ;
+            position: relative;
+            margin-bottom: 30px;
+            flex-basis: auto;
+        }
+        .title{
+            @include box-sizing();
+            padding-right: 15px;
+            float: left;
+            color: $eu-logo-title-color;
+            text-align: right;
+            font: 13px DINPro-Medium, sans-serif;
+            @include calc(width, "(100% - #{$img-width})"); 
+            @include tablet{
+                float: none;
+                text-align: center;
+                order: 2;
+                width: 100%;
+            }
+        }
+        .eu-logo-img{
+            width: $img-width;
+            float: right;
+            @include tablet{
+                float: none;
+                order: 1;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

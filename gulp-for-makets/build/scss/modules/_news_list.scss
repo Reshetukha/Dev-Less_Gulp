@@ -1,0 +1,110 @@
+/* 
+    Created on : Jun 25, 2015, 4:15:57 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+.news-block{
+   .news-list{
+        .article-lang{
+            margin-bottom: 10px;
+        }
+        .newslist-item-withfoto{
+            position: relative;
+            @include box-sizing();
+            margin-bottom: 50px;
+            @include tablet{
+                padding-bottom: 30px;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 30px;
+                    bottom: 0px;
+                    height: 33px;
+                    @include calc(width, "(100% - 60px)"); 
+                    border-bottom: 3px solid $pink-color;
+                }
+            }
+            .news-list-figure{
+                @include box-sizing();
+                @include size(100%, 220px);
+                padding: 0px 20px 0px 20px;
+                @include tablet{
+                    @include size(100%, auto);
+                     padding: 0px 0px 20px 0px;
+                }
+                img{
+                    @include size(100%, auto);
+                }
+            }
+            .news-list-details{
+                 padding: 0px 20px 0px 20px;
+                .title{
+                    @include box-sizing();
+                    @include size(100%, auto);
+                    color: $title-font-color;
+                    margin-top: 7px;
+                    .title-link{
+                        text-transform: uppercase;
+                        font: 600 20px/1.2 'DINPro-Medium', sans-serif;
+                        letter-spacing: -0.5px;
+                        color: $title-font-color;
+                    }
+                }
+                .lead-header-data{
+                    @include box-sizing();
+                    display: block;
+                    @include size(100%, auto);
+                    padding: 20px 0px;
+                    font: 19px/1.2 'DINPro-Medium', sans-serif;
+                    border-bottom: 3px solid $pink-color;
+                    @include tablet{
+                        border-bottom: none;
+                    }
+                }
+
+            }
+        }
+        .newslist-item{
+            @include box-sizing();
+            margin-bottom: 50px;
+            .news-list-details{
+                padding: 0px 20px 0px 20px;
+                .article-lang{
+                    @include tablet{
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 10px;
+                    }
+                }
+                .title{
+                    @include box-sizing();
+                    @include size(100%, auto);
+                    color: $title-font-color;
+                    @include tablet{
+                        @include size(48%, auto);
+                        float: left;
+                    }
+                    .title-link{
+                        text-transform: uppercase;
+                        font: 600 15px/1.2 'DINPro-Medium', sans-serif;
+                        letter-spacing: -0.5px;
+                        color: $title-font-color;
+                    }
+                }
+                .lead-header-data{
+                    display: block;
+                    @include box-sizing();
+                    @include size(100%, auto);
+                    padding: 20px 0px;
+                    font: 14px/1.2 'DINPro-Medium', sans-serif;
+                    @include tablet{
+                        @include size(48%, auto);
+                        float: right;
+                        padding: 0px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

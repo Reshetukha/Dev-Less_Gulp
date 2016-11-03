@@ -1,0 +1,218 @@
+/* 
+    Created on : Jun 25, 2015, 4:15:57 PM
+    Author     : Ruslana Gorbachuk
+*/
+.article{
+    .article-header{
+        margin-bottom: 30px;
+        .inner-wr{
+            @include box-sizing();
+            display: block;
+        }
+        .article-main-figure{
+            @include box-sizing();
+            @include size(100%, auto);
+            @include triangles(25px 25px 25px 0px, 45%, 100%, transparent #ffffff transparent transparent);
+            &:before{
+                @include calc(left, "(100% - 25px)"); 
+                @include calc(top, "(50% - 25px)"); 
+            }
+            img{                
+                @include size(100%, auto);
+            }
+        }
+        .article-main-details{
+            @include box-sizing();
+            @include size(100%, auto);
+            padding: 35px 30px 30px 30px;
+            .mark{
+                color: #ffffff;
+                margin-right: 15px;
+                background-color: $pink-color;
+                a{
+                    color: #ffffff;
+                    background-color: $pink-color;
+                }
+            }
+            .mark, .article-date{
+                display: inline-block;
+                padding: 3px 5px;
+                margin-bottom: 20px;
+                font: 400 15px/1.2 'DINPro-Medium', sans-serif;
+                text-transform: uppercase;
+            }
+            .label{
+                display: inline-block;
+                font-size: 17px;
+                margin-right: 15px;
+            }
+            .article-lang{
+                
+            }
+            .article-title{
+                @include box-sizing();
+                @include size(100%, auto);
+                text-transform: uppercase;
+                font: 600 34px/1.2 'DINPro-Medium', sans-serif;
+                letter-spacing: -0.5px;
+                color: $title-font-color;
+            }
+            .lead-header-data{
+                @include box-sizing();
+                display: block;
+                @include size(100%, auto);
+                padding: 20px 0px;
+                font: 17px/1.5 'DINPro-Medium', sans-serif;
+            }
+        }
+    }
+}
+
+
+.main_review{
+    font: 17px/1.5 'DINPro-Medium', sans-serif;
+   .first-letter-decor{
+        position: relative;
+        .firstletter {
+            position: absolute;
+            top: -18px;
+            left: 10%;
+            color: $pink-font-color;
+            font: 800 84px 'DINPro-Medium', sans-serif;
+        }
+     
+    }
+    .full-width-paragraf{
+        @include box-sizing();
+        @include flex-align-content(center);
+        padding: 30px 15%;
+        clear: both;
+        @include tablet{
+            padding: 0px 5%;
+        }
+        &.first-letter-decor{ padding-top: 0px;}
+    }
+    .title{
+        padding: 7px 15%;
+        text-transform: uppercase;
+        font: 600 30px 'DINPro-Medium', sans-serif;
+    }
+    .subtitle{
+        padding: 7px 15% 15px 15%;
+        font: 20px 'DINPro-Medium', sans-serif;
+    }
+    .right-paragraf, .left-paragraf{
+        @include box-sizing();
+        width: 50%;
+        &:after{
+            display:table;
+            content: '';
+            clear: both;
+        }
+    }
+    .right-paragraf{
+        float: right;
+        padding-left: 20px;
+        padding-right: 10%;
+    }
+    .left-paragraf{
+        float: left;
+        padding-right: 20px;
+        padding-left: 10%;
+        text-align: right;
+    }
+    
+    .right-image,  .left-image{
+        position: relative;
+        display: block;
+        width: 50%;
+        &:after{
+            display:table;
+            content: '';
+            clear: both;
+        }
+        img{
+            max-height: 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .right-image{
+        float: right;
+    }
+    .left-image{
+        float: left;
+    }
+    .article-quote{
+        position: relative;
+        @include box-sizing();
+        @include flex-align-content(center);
+        padding: 30px 15% 30px 25%;
+        clear: both;
+        background: url("#{$icon-url}quote_lg.png") no-repeat 15% 30px transparent;
+        background-size: 10% auto;
+        font: 28px 'DINPro-Medium', sans-serif;
+        @include tablet{
+            padding: 0px 5%;
+        }
+    }
+    .ul, ul{
+        @include box-sizing();
+        padding: 30px 15%;
+        li{
+            position: relative;
+            font: 17px/1.5 'DINPro-Medium', sans-serif;
+            padding: 10px 0px 10px 20px;
+            &:before{
+                position: absolute;
+                left: 0px;
+                top: 6px;
+                content: '\2022';
+                font-size: 22px;
+                color: $pink-font-color;
+             }
+            
+        }
+    }
+}
+
+
+.shape{
+    float: left;
+    margin-left: 10%;
+}
+.shape-image{
+    display: none;
+}
+.shape-image-title{
+    @include box-sizing();
+    float: right;
+    padding-right: 10%;
+    padding-top: 30px;
+    margin-left: -30px;
+    width: 40%;
+    font:  30px/1.2 'DINPro-Medium', sans-serif;
+    color: $pink-font-color;
+    &:after{
+        display:table;
+        content: '';
+        clear: both;
+    }
+}
+.editor{
+    .first-letter-decor{
+        
+    }
+    .shape-image{
+        
+    }
+    .shape-image-title{
+        
+    }
+    .title{
+        
+    }
+    .subtitle{
+        
+    }
+}

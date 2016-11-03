@@ -1,0 +1,7 @@
+<span class="rating" itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+         Оценка:
+         <span class="value" itemprop="value">7</span> из 
+          
+         <span class="best" itemprop="best">10</span> 
+     
+    </span>

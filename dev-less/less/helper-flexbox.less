@@ -1,0 +1,58 @@
+//--------------------------------*/
+//FLEXBOX MODUL MIXINS
+//ver        : 10.10.2014
+//Author     : Ruslana
+//--------------------------------*/
+
+
+//@descr: set display:flex to parent element 
+.flexbox()
+{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: flexbox;  //2011 hybrid syntax
+  display: box;      //2009 syntax
+}
+
+//@descr: horizontal align fot children of flex element (SET TO PARENT ELEMENT ) 
+.justify-content(@spaceflex)
+{
+    -webkit-justify-content: @spaceflex;
+    -moz-justify-content: @spaceflex;
+    -ms-justify-content: @spaceflex;
+    justify-content: @spaceflex;
+    
+    box-pack: @spaceflex;  //2011 hybrid syntax - use start instead of flex-start
+}
+
+//@descr: vertical align fot children of flex element (SET TO PARENT ELEMENT ) 
+.align-items(@position)
+{
+    -moz-box-align: @position;
+    -ms-box-align: @position;
+    -webkit-box-align: @position;
+    align-items: @position;
+    
+    box-align: @position; //2011 hybrid syntax - use start instead of flex-start
+}
+
+//@descr: Let all the flexible items be the same length, regardles of its content and height 100% (SET TO CHILD ELEMENT) 
+.flex(@item-width:1, @item-height:100%)
+{
+    -webkit-flex: @item-width @item-height;  /* Safari 6.1+ */
+    -moz-flex: @item-width @item-height;
+    -ms-flex: @item-width @item-height;  /* IE 10 */    
+    flex: @item-width @item-height;
+}
+
+//@descr: It is a shorthand for flex-direction and flex-wrap (SET TO PARENT ELEMENT ) 
+.flex-flow(@flex-direction:row, @flex-wrap:wrap)
+{
+    -webkit-flex-flow: @flex-direction @flex-wrap;
+    -moz-flex-flow: @flex-direction @flex-wrap;
+    -ms-flex-flow: @flex-direction @flex-wrap;
+    flex-flow: @flex-direction @flex-wrap;
+}

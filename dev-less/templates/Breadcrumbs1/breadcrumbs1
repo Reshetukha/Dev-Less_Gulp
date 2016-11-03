@@ -1,0 +1,17 @@
+<div class="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a href="#" itemprop="url">
+        <span itemprop="title">Название</span>
+    </a>
+    <span class="sep">›</span>
+    <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="#" itemprop="url">
+            <span itemprop="title">Название</span>
+        </a>
+        <span class="sep">›</span>
+        <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="#" itemprop="url">
+                <span itemprop="title">Название</span>
+            </a>
+        </span>
+    </span>
+</div>

@@ -1,0 +1,9 @@
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">
+      20341 Whitworth Institute
+      405 N. Whitworth
+    </span>
+    <span itemprop="addressLocality">Seattle</span>,
+    <span itemprop="addressRegion">WA</span>
+    <span itemprop="postalCode">98052</span>
+  </div>	

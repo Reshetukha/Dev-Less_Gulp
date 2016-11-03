@@ -1,0 +1,139 @@
+html, body{
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    width:100%;
+}
+
+body{
+    position: relative;
+    height: auto !important;
+    height: 100%;
+    overflow-y:scroll;
+    font: @main-font;
+}
+
+.wrapper{
+    width: 100%;
+    padding-bottom: @main-footer-height+@main-wrapper-padding-bottom;
+}
+
+.html{
+    width: 100%;
+    clear: both;
+    min-width:@main-min-width;
+}
+.wrap{
+    margin:0 auto;
+    max-width:@main-max-width;
+    .box-sizing();
+}
+
+header
+{
+    height: @main-header-height;
+    .box-sizing();
+}
+/*MAIN SRTUCTURE THREE-COLUMN MAKET START*/
+.body-three
+{
+    .box-sizing();
+
+    .column-left
+    {
+        width: @main-three-column-left-width;
+        .box-sizing();
+    }
+
+    .column-center
+    {
+        width: @main-three-column-center-width;
+        .box-sizing();
+    }
+
+    .column-right
+    {
+        width: @main-three-column-right-width;
+        .box-sizing();
+    }
+}
+/*MAIN SRTUCTURE TWO-COLUMN MAKET START*/
+.body-two
+{
+    .box-sizing();
+
+    .column-left
+    {
+        width: @main-two-column-left-width;
+        .box-sizing();
+    }
+
+    .column-center
+    {
+        width: @main-two-column-center-width;
+        .box-sizing();
+    }
+
+    .column-right
+    {
+        width: @main-two-column-right-width;
+        .box-sizing();
+        display:none;
+    }
+}
+/*MAIN SRTUCTURE ONE-COLUMN MAKET START*/
+.body-one
+{
+    .box-sizing();
+
+    .column-left
+    {
+        display:none;
+    }
+
+    .column-center
+    {
+        width: @main-one-column-width;
+    }
+
+    .column-right
+    {
+        display:none;
+    }
+}
+
+footer
+{
+    height: @main-footer-height; 
+    position: absolute; 
+    bottom: 0; left: 0; right: 0;
+    .box-sizing();
+}
+
+/* breadcrumbs */
+.breadcrumbs{
+    overflow: hidden;
+    margin:5px;
+    .box-sizing();
+    font-size:0.8em;
+
+    .sep{
+        margin: 0 5px;
+    }
+
+    a{
+        span{
+            .word-wrap();
+        }
+
+    }
+}
+
+/* copyright */
+.copyright{
+    .vipdesign{
+        &:hover{
+
+        }
+    }
+}

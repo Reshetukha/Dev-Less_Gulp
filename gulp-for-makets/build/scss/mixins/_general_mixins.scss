@@ -1,0 +1,180 @@
+//@descr: змінює розрахунок ширини та висоти елемента
+//@descr: border-box при розрахунку width и height включає (width або height) + padding + border + margin
+@mixin box-sizing($sizing: border-box)
+{
+    -ms-box-sizing: $sizing;
+    -moz-box-sizing: $sizing;
+    -webkit-box-sizing: $sizing;
+    box-sizing: $sizing;
+}
+//@descr: розмір елемента
+@mixin size($width, $height)
+{
+    width: $width;
+    height: $height;
+}
+//@descr: загальне округлення
+@mixin rounded($radius: 3px)
+{
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+//@descr: округлення зліва
+@mixin border-left-radius($radius: 3px)
+{
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+//@descr: округлення зправа
+@mixin border-right-radius($radius)
+{
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+    //@descr: округлення зверху
+@mixin border-top-radius($radius)
+{
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+}
+//@descr: округлення знизу
+@mixin border-bottom-radius($radius)
+{
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+//@descr: вибіркове округлення
+@mixin border-radius($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0)
+{
+    -webkit-border-top-right-radius: $topright;
+    -webkit-border-bottom-right-radius: $bottomright;
+    -webkit-border-bottom-left-radius: $bottomleft;
+    -webkit-border-top-left-radius: $topleft;
+    -moz-border-radius-topright: $topright;
+    -moz-border-radius-bottomright: $bottomright;
+    -moz-border-radius-bottomleft: $bottomleft;
+    -moz-border-radius-topleft: $topleft;
+    border-top-right-radius: $topright;
+    border-bottom-right-radius: $bottomright;
+    border-bottom-left-radius: $bottomleft;
+    border-top-left-radius: $topleft;
+}
+//@descr: встановлює перенос слів, які не вміщаються в заданий блок по ширині
+@mixin word-wrap()
+{
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+//@descr: три точки при розриві тексту, що не вміщуться в задану ширину блоку
+@mixin text-overflow() {
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   -o-text-overflow: ellipsis;
+}
+//@descr: зовнішня тінь
+@mixin drop-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $alpha: 0.1)
+{
+    -webkit-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+    -moz-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+    box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+}
+//@descr: вертикальний градієнт
+@mixin gradient-vertical($color, $start-color, $end-color, $start-percent,$end-percent)
+{
+    background-color: $color;
+    background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+    background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    //filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb($start-color),argb($end-color))); // IE9 and down
+}
+//@descr: фільтри
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+ 
+
+//накладає ефект анімації на єлемент
+@mixin transition($transition-rule:all, $duration:0.2s, $ease:ease-out)
+{
+    -webkit-transition: $transition-rule $duration $ease;
+    -moz-transition: $transition-rule $duration $ease;
+    -o-transition: $transition-rule $duration $ease;
+    transition: $transition-rule $duration $ease;
+}
+//@descr: надання елементу input необхідного розміру. Попередньо вказати display.
+@mixin input($width, $height){
+    outline: 0;
+    @include size($width, $height);;
+    line-height: $height;
+    @include box-sizing();
+}
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+/*******************************************************************************************************
+                                           TRANSFORM
+*******************************************************************************************************/
+//@descr: трансформуе елемент
+@mixin transform($arguments)
+{
+    -webkit-transform: $arguments;
+    -moz-transform: $arguments;
+    -o-transform: $arguments;
+    -ms-transform: $arguments;
+    transform: $arguments;
+}
+//@descr: повертае елемент на заданий кут
+@mixin rotation($deg:5deg)
+{
+  @include transform(rotate($deg));
+}
+//@descr: змінює масштаб елемента
+@mixin scale($ratio:1.5)
+{
+    @include transform(scale($ratio));
+}
+/*******************************************************************************************************
+                                           TRIANGLES
+*******************************************************************************************************/
+
+@mixin triangles($border-width, $top, $left, $border-color)
+{
+     position: relative;
+
+    &:before{
+        position: absolute;
+        top: $top;
+        left: $left;
+        content: '';
+        display: inline-block;
+        @include size(0px, 0px);
+        border-style: solid;
+        border-width: $border-width;
+        border-color: $border-color;
+        line-height: 0px;
+        z-index: 3;
+    }
+}
+
+/*******************************************************************************************************
+                                           CALCULATION PROP
+*******************************************************************************************************/
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: calc(#{$expression}); 
+}
+

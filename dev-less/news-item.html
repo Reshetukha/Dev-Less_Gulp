@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <!-- 16*16 -->
+        <link rel="shortcut icon" href="favicon.png" />
+        <!-- 48*48 -->
+        <link rel="icon" href="favicon.png" />
+
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+        <!-- розібратися з підключення до різних типів пристроїв різних скриптів -->
+        <script src="js/jquery-2.0.2.js"></script>
+
+        <!-- add plugins -->
+        <link rel="stylesheet" href="js/plugins/responsiveslides/responsiveslides.css">
+
+        <title>Новина</title>
+        <meta name="description" content='' />
+        <meta name="keywords" content='' />
+
+        <link rel="stylesheet/less" type="text/css" href="./less/struct.less" />
+        <link rel="stylesheet/less" type="text/css" href="./less/editor_styles.less" />
+       
+       
+</head>
+
+<body>
+	<div class="wrapper clear r">
+		<!-- HEADER -->
+		<header>
+			<div class="wrap h clear">
+				<a href="#" class="logo fl"><img src="pic/pic_html/logo.png" alt="logo" /></a>
+			</div>
+		</header>
+		<!-- HEADER END-->
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav">
+            <div class="wrap h clear">
+                <menu class="main-menu">
+                    <li><a href="#">Про компанію</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </menu>
+            </div>
+        </nav>
+        <!-- NAVIGATION END -->
+        
+        <!-- BREADCRUMBS -->
+<div class="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a href="#" itemprop="url">
+        <span itemprop="title">Стартова</span>
+    </a>
+    <span class="sep">›</span>
+    <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="./news-list.html" itemprop="url">
+            <span itemprop="title">Новини</span>
+        </a>
+        <span class="sep">›</span>
+        <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="./news-list.html" itemprop="url">
+                <span itemprop="title">Група новин</span>
+            </a>
+            <span class="sep">›</span>
+            <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="./news-item.html" itemprop="url">
+                    <span itemprop="title">Новина</span>
+                </a>
+            </span>
+        </span>
+    </span>
+</div>
+        <!-- BREADCRUMBS END -->
+        
+        <!-- ONE COLUMN STRUCTURE START -->
+        <div class="wrap h clear body-one">
+                <!-- LEFT COLUMN -->
+                <aside class="column-left fl">
+                </aside>
+                <!-- LEFT COLUMN END-->
+                    
+                    
+                    
+                <!-- RIGHT COLUMN -->
+                <aside class="column-right fr">
+                </aside>
+                <!-- RIGHT COLUMN END-->
+                
+                <!-- CENTER COLUMN -->
+                <section class="column-center r h">
+
+                    <div class="content">
+		
+                        <article class="news-item h">
+                                
+                            <time>
+                                08.03.2014
+                            </time>
+
+                            <h1 class="title">Назва сторінки</h1>
+
+                            Повний опис
+
+                            <div class="author" itemscope itemtype="http://data-vocabulary.org/Person">
+                                <a href="#" itemprop="url"><span itemprop="name">Автор</span></a>
+                            </div>
+
+                            <div class="source" itemscope itemtype="http://data-vocabulary.org/Organization">
+                                <a href="#" itemprop="url"><span itemprop="name">Джерело</span></a>
+                            </div>
+
+                            <a href="./news-list.html" class="back">Повернутися до списку новин</a>
+                            
+                        </article>
+                    
+                    </div>
+                           
+                </section>
+                <!-- CENTER COLUMN END-->
+        </div>
+        <!-- ONE COLUMN STRUCTURE END -->
+        
+	</div>		
+	
+	
+	
+	<!-- FOOTER -->
+	<footer>
+		<div class="wrap h clear">
+			<div class="copyright">
+				&copy; Copyright<br/>
+				<a href="http://www.vipdesign.com.ua/" target="_blank">Разработка сайта</a> - <a href="http://www.vipdesign.com.ua/" class="vipdesign" target="_blank">VIP Design</a>
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER END-->
+	
+        
+        <!-- розібратися з підключення до різних типів пристроїв різних скриптів -->
+        <script src="js/jquery-2.0.2.min.js"></script>
+
+        <!-- add plugins -->
+        <script src="js/plugins/fittext/jquery.fittext.js"></script>
+        <script src="js/plugins/responsiveslides/responsiveslides.min.js"></script>
+        <script src="js/settings.js"></script>
+        
+        <!-- працюємо з LESS -->
+        <script type="text/javascript">
+            less = {
+                env: "development", // or "production"
+                async: false, // load imports async
+                fileAsync: false, // load imports async when in a page under
+                poll: 1000, // when in watch mode, time in ms between polls
+                functions: {}, // user functions, keyed by name
+                dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+            };
+        </script>    
+        <script src="./less/less-2.0.0.min.js" type="text/javascript"></script>
+</body>
+</html>

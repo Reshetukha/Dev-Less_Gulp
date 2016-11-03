@@ -1,0 +1,26 @@
+<article class="news-item h" itemscope itemtype="http://schema.org/Article">
+        
+        <time  datetime="2015-10-15">
+            08.03.2014
+        </time>
+    
+        <h1 class="title" itemprop="name">Назва сторінки</h1>
+        
+        Повний опис
+        
+        <div class="author" itemscope itemtype="http://data-vocabulary.org/Person">
+            <a href="#" itemprop="url"><span itemprop="author">Автор</span></a>
+        </div>
+        
+        <div class="source" itemscope itemtype="http://data-vocabulary.org/Organization">
+            <a href="#" itemprop="url"><span itemprop="name">Джерело</span></a>
+        </div>
+        
+       <meta itemprop="interactionCount" content="FacebookLikes:7"/>  
+       <meta itemprop="interactionCount" content="GooglePlus:3"/> 
+
+        <a href="./news-list.html" class="back">Повернутися до списку новин</a>
+    
+</article>
+
+

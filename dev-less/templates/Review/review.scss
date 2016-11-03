@@ -1,0 +1,29 @@
+@import "../../less/elements.less";
+
+.review-list{
+
+    .item{
+        .box-sizing();
+        
+        .review-subject{
+            display: block;
+            width: 100%;
+        }
+
+        img{
+            display: inline-block;
+        }
+        .reviewer{
+            display: inline-block;
+        }
+
+        time{
+            display: block;
+            font-size: 0.7em;
+        }
+
+        .description{
+            display: block;
+        }
+    }
+}

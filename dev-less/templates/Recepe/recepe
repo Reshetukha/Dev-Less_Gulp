@@ -1,0 +1,68 @@
+<div class="recepe" itemscope itemtype="http://data-vocabulary.org/Recipe" >
+
+    <h1 itemprop="name">Бабушкин праздничный яблочный пирог</h1>
+
+    <img itemprop="photo" src="apple-pie.jpg" /> 
+
+    Автор: <span class="author" itemprop="author">Кэрол Смит</span>
+
+    Дата публикации: <time class="date-publish" datetime="2009-11-05" itemprop="published">
+
+        5 ноября 2009 г.</time>
+
+    <span class="summary" itemprop="summary">Это рецепт яблочного пирога моей бабушки.  Я обычно добавляю
+        немного мускатного ореха.</span>
+    <span class="review" itemprop="review" itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+
+        <span class="rating" itemprop="rating">4,0</span> звезды на основе
+
+        <span class="count" itemprop="count">35</span> отзывов 
+    </span>
+
+    Время подготовки: <time class="prepTime" datetime="PT30M" itemprop="prepTime">30 мин.</time>
+
+    Время приготовления: <time class="cookTime" datetime="PT1H" itemprop="cookTime">1 час</time>
+
+    Общее время: <time class="totalTime" datetime="PT1H30M" itemprop="totalTime">1 час 30 мин.</time>
+
+    Yield: <span class="yield" itemprop="yield">пирог диаметром 23 см (8 порций)</span>
+    <span class="nutrition" itemprop="nutrition" itemscope itemtype="http://data-vocabulary.org/Nutrition">
+
+        Размер порции: <span class="servingSize" itemprop="servingSize">1 средний кусок</span>
+
+        Калорий на порцию: <span class="calories" itemprop="calories">250</span> 
+
+        Жиров на порцию: <span class="fat" itemprop="fat">12 г</span>
+
+
+    </span>
+
+    Ингредиенты:   
+
+    <span class="ingredient" itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+
+        Нарезанные тонкими ломтиками <span class="name" itemprop="name">яблоки</span>:     
+
+        <span class="amount" itemprop="amount">6 стаканов</span>
+
+    </span>
+
+    <span class="ingredient" itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+
+        <span class="name" itemprop="name">Сахар-песок</span>:     
+
+        <span class="amount" itemprop="amount">3/4 стакана</span>
+
+    </span>
+
+    ...
+
+    Приготовление:
+    <div class="instructions" itemprop="instructions">
+        <ol>
+            <li>Яблоки очистите от кожуры и нарежьте.</li>
+            <li>Смешайте сахар с корицей. Если яблоки кислые, добавьте ещё сахара.</li>
+            <li>....</li>
+        </ol>
+    </div>
+</div>

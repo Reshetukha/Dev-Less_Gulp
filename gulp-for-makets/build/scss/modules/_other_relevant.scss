@@ -1,0 +1,190 @@
+/* 
+    Created on : Jun 26, 2015, 3:06:09 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+.relevant-news-wr{
+    margin-bottom: 40px;
+    $relevant-news-list-height: 145px;
+    &>.title{
+        position: relative;
+        @include box-sizing();
+        margin-bottom: 10px;
+        padding: 7px 20px;
+        font: 600 15px/1.1 'DINPro-Medium', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+        color: $title-font-color;
+    }
+    .slider-controls{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        @include box-sizing();
+        @include size(117px, auto);
+        margin-bottom: 10px;
+        text-transform: none;
+        .counter{
+            display: inline-block;
+            vertical-align: top;
+            font: 600 13px/23px 'DINPro-Medium', sans-serif;
+        }
+        .prev, .next{
+            @include box-sizing();
+            vertical-align: top;
+            display: inline-block;
+            @include size(38px, 23px);
+            background: url("#{$image-sprite}") no-repeat transparent;
+            cursor: pointer;
+        }
+        .prev{
+            background-position:  -240px -78px;
+            padding-right: 20px;
+        }
+        .next{
+            background-position:  -314px -78px;
+            padding-left: 20px;
+        }
+    }
+    .relevant-news-list{
+            @include box-sizing();
+            @include size(100%, $relevant-news-list-height);
+            @include flex-row-items-align(space-between, flex-start);
+            @include tablet{
+                height: auto;
+                margin-bottom: 30px;
+            }
+        .topic-list-left-bg, .topic-list-right-bg{
+            @include box-sizing();
+            height: $relevant-news-list-height;
+            @include lgscreen{
+                @include calc(width, "(100% - 1400px)/2"); 
+            }
+            @include mddesktop{
+                width: 0px; 
+                display: none;
+            }
+            @media screen and (max-width: 1420px) {
+                width: 0px; 
+                display: none;
+            }
+        }
+        .topic-list-left-bg{
+            background-color: $pink-color;
+        }
+        .topic-list-right-bg{
+            background-color: $relevant-news-right-color;
+        }
+        .inner-wr{
+            @include box-sizing();
+            display: block;
+        }
+        .relevant-list-left{
+            .newslist-item{
+                @include box-sizing();
+                @include size(100%, $relevant-news-list-height);
+                padding: 20px 100px 20px 20px;
+                background-color: $pink-color;
+                color: #ffffff;
+                @include tablet{
+                    margin-bottom: 0px;
+                }
+                .topic{
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    margin-right: 10px;
+                    color: #ffffff;
+                    font: 400 15px/1.2 'DINPro-Medium', sans-serif;
+                    text-transform: uppercase;
+                }
+                .title{
+                    @include box-sizing();
+                    @include size(100%, auto);
+                    .title-link{
+                        text-transform: uppercase;
+                        font: 600 20px/1.2 'DINPro-Medium', sans-serif;
+                        letter-spacing: -0.5px;
+                        color: #ffffff;
+                    }
+                }
+                .article-lang{
+                    float: right;
+                }
+            }
+        }
+        .relevant-list-right{
+            .newslist-item{
+                @include box-sizing();
+                @include flex-row-items-align(flex-start, flex-start);
+                @include size(100%, $relevant-news-list-height);
+                background-color: $relevant-news-right-color;
+                padding: 20px 15px;
+                @include tablet{
+                    margin-bottom: 0px;
+                }
+                .article-date{
+                    @include size(35%, auto);
+                    @include box-sizing();
+                    position: relative;
+                    margin: 15px 0px;
+                    @include box-sizing();
+                    padding-left: 30px;
+                    .note{
+                        display: inline-block;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        font: 600 18px/1.6 'DINPro-Medium', sans-serif;
+                        text-transform: uppercase;
+                        color: $title-font-color;
+                    }
+                    time{
+                        position: relative;
+                        display: inline-block;
+                        @include box-sizing();
+                        @include size(100%, auto);
+                    }
+                    .day{
+                        display: inline-block;
+                        color: $pink-font-color;
+                        font-size: 88px;
+                        line-height: 65px;
+                        font-weight: bold;
+                        font-family: 'DINPro-Bold', sans-serif;
+                        letter-spacing: -0.5;
+                    }
+                    .month{
+                        display: inline-block;
+                        vertical-align: bottom;
+                        margin-left: -50px;
+                        font: 600 18px/1.6 'DINPro-Medium', sans-serif;
+                        text-transform: uppercase;
+                        background-color: $relevant-news-right-color;
+                        color: $title-font-color;
+                    }
+                }
+                .details{
+                    @include size(65%, auto);
+                    @include box-sizing();
+                    .topic{
+                        display: inline-block;
+                        margin-bottom: 20px;
+                        margin-right: 10px;
+                        text-transform: uppercase;
+                        font: 400 15px/1.2 'DINPro-Medium', sans-serif;
+                    }
+                    .title{
+                        @include box-sizing();
+                        @include size(100%, auto);
+                        .title-link{
+                            text-transform: uppercase;
+                            font: 600 20px/1.2 'DINPro-Medium', sans-serif;
+                            letter-spacing: -0.5px;
+                            color: $title-font-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

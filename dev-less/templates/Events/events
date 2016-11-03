@@ -1,0 +1,64 @@
+<div class="event" itemscope itemtype="http://data-vocabulary.org/Event">
+        ​<a href="http://www.example.com/events/spinaltap" itemprop="url" >
+            <span class="summary" itemprop="summary">Spinal Tap</span>
+        </a>
+        <img class="event-image" itemprop="photo" src="spinal_tap.jpg" />
+
+      <span class="description" itemprop="description">После вызвавших широкий резонанс поисков нового барабанщика
+       группа Spinal Tap отправляется в гастрольное турне, которое начнется с концерта
+       в Сан-Франциско.</span>
+
+        Когда:
+        <time class="date" itemprop="startDate" datetime="2015-10-15T19:00-08:00">15 октября, 19:00</time>–
+        <time class="date"itemprop="endDate" datetime="2015-10-15T19:00–08:00">15 октября, 21:00</time>
+
+        Где:
+       ​<span class="location" itemprop="location" itemscope itemtype="http://data-vocabulary.org/​Organization" >
+             ​<span class="location-name" itemprop="name">театр Варфилд</span>
+             ​<span class="location-address" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+                 <span itemprop="street-address">982 Маркет-стрит</span>,
+                 <span itemprop="locality">Сан-Франциско</span>,
+                 <span itemprop="region">Калифорния</span>
+             </span>
+             <span itemprop="geo" itemscope itemtype="http://data-vocabulary.org/​Geo">
+                <meta itemprop="latitude" content="37.774929" />
+                <meta itemprop="longitude" content="-122.419416" />
+             </span>
+      </span>
+
+       Категория: <span itemprop="eventType">концерт</span>
+
+        <span class="ticketAggregate" itemprop="ticketAggregate" itemscope itemtype="http://data-vocabulary.org/Offer-aggregate" >
+            Стоимость билетов от <span class="low-price" itemprop="lowPrice">10.00</span>
+            до <span class="high-price" itemprop="highPrice">11.00</span>
+
+             <span class="currency" itemprop="currency" content="USD" >долларов США</span>
+
+              В наличии <span class="offerCount" itemprop="offerCount">2,000</span> билетов
+            <a class="offerViewLink" href="http://www.example.com/events/spinaltap/alltickets" itemprop="offerurl">
+                    http://google.com/ticket
+                    <span>Просмотреть все билеты, имеющиеся в наличии </span>
+            </a>
+
+            <span class="tickets" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
+                    <a class="offerurl-view" href="http://www.example.com/events/spinaltap/presale" itemprop="offerurl">Цена билета при предварительной продаже</a>
+                    <span class="price" itemprop="price">10 долларов США</span>
+
+                   <span itemprop="currency" content="USD" />
+
+                  до <time class="date" itemprop="priceValidUntil" datetime="2015-11-10">10 ноября 2015 г.</time>
+                  (в наличии <span itemprop="quantity">1000</span> билетов)
+            </span>
+
+            <span class="tickets" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
+
+                <a class="offerurl-view" href="http://www.example.com/events/spinaltap/tickets" itemprop="offerurl">Полная цена билета</a>
+                <span  class="price" itemprop="price">11 долларов США</span>
+
+                 <meta itemprop="currency" content="USD" />
+
+            </span>
+
+        </span>
+
+    </div>

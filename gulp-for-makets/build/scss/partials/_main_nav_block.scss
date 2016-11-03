@@ -1,0 +1,143 @@
+/* 
+    Created on : Jun 23, 2015, 4:20:51 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+.main-header{
+    .main-nav-block{
+        @include box-sizing();
+        @include size(100%, $main-nav-height);
+        @include flex-row-items-align(space-between, flex-start);
+        @include tablet{height: 120px;}
+        @include mobile{height: 100px;}
+
+        .main-nav-left-bg, .main-nav-right-bg{
+            @include box-sizing();
+            height: $main-nav-height;
+            @include lgscreen{
+                @include calc(width, "(100% - 1400px)/2"); 
+            }
+            @include mddesktop{
+                width: 0px; 
+                display: none;
+            }
+            @media screen and (max-width: 1420px) {
+                width: 0px; 
+                display: none;
+            }
+        }
+        .main-nav-left-bg{
+            background-color: #ffffff;
+        }
+        .main-nav-right-bg{
+            background-color: $main-nav-last-color;
+        }
+        .logo{
+            height: $main-nav-height;
+            padding: 10px 0 10px 0px;
+            @include mddesktop{padding: 10px 0 10px 20px;}
+            @include tablet{height: 120px;}
+            @include mobile{
+                padding: 10px 0 10px 0px;
+                height: 100px;
+            }
+            a{
+                @include flexbox();
+                @include box-sizing();
+                @include size(100%, 100%);
+            }
+            img{
+                width:auto;
+                height:auto;
+                max-width:100%;
+                max-height:100%;
+                @include flex-align-self(flex-start);
+                display: block;
+                @include mobile{
+                    margin: auto;
+                }
+            }
+        }
+        .main-nav{
+            height: $main-nav-height;
+            background-color: $main-nav-last-color;
+            position: relative;
+            @include mobile{height: $main-nav-mob-height;}
+            &:after{
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top : 0px;
+                right: -1px;
+                @include size(1px, $main-nav-height);
+                background-color: $main-nav-last-color;
+                @include mobile{@include size(1px, $main-nav-mob-height);}
+            }
+            .nav-list{
+                @include box-sizing();
+                height: 100%;
+                @include flex-row-items(space-around);
+                .nav-item{
+                    @include box-sizing();
+                    flex-basis: 25%;
+                    height: 100%;
+                    @include flexbox();
+                    @include flex-align-items(center);
+                    &:first-child{background-color: $main-nav-first-color;}
+                    &:nth-child(2){background-color: $main-nav-second-color;}
+                    &:nth-child(3){background-color: $main-nav-third-color;}
+                    &:last-child{
+                        background-color: $main-nav-last-color;
+                        
+                    }
+                    a{
+                        @include flexbox();
+                        @include flex-direction(column);
+                        @include flex-justify-content(center);
+                        @include size(100%, 100%);
+                        padding: 0px 20px;
+                        color: $main-nav-item-font-color;
+                        text-decoration: none;
+                        text-align: left;
+                        font: #{$main-nav-item-font};
+                        &:hover{
+                            background: '';
+                        }
+                    }
+                }
+            }
+            @include tablet{
+                display: none;
+            }
+        }
+        
+        .mobile-nav-trigger{
+            display: none;
+            @include tablet{
+                @include flexbox();
+                @include flex-justify-content(center);
+                @include flex-align-items(center);
+                .navbar-toggle{
+                    @include box-sizing();
+                    @include size(65px, 65px);
+                    border: none;
+                    outline: none;
+                    padding: 0px;
+                    background: transparent;
+                     cursor: pointer;
+                    -webkit-appearance: none;
+                    .icon-bar {
+                        display: block;
+                        @include rounded(2px);
+                        @include box-sizing();
+                        width: 100%;
+                        height: 7px;
+                        margin: 12px 0px;
+                        background-color: $pink-color;
+                    }
+                }
+            }
+        }
+    }
+    
+}

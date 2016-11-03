@@ -1,0 +1,18 @@
+.breadcrumbs{
+    
+    overflow: hidden;
+    margin:5px;
+    .box-sizing();
+    font-size:0.8em;
+
+    .sep{
+        margin: 0 5px;
+    }
+
+    a{
+        span{
+            .word-wrap();
+        }
+
+    }
+}

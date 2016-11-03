@@ -1,0 +1,29 @@
+<div itemscope itemtype="http://data-vocabulary.org/Product" class="product r h">
+    <span itemprop="brand" class="brand">Торгова марка</span>
+    <span itemprop="name" class="title">Назва марка</span>
+    <img itemprop="image" src="anvil_executive.jpg" class="thumb-main" />
+
+    <span itemprop="description" class="description">
+        Опис товару
+    </span>
+    
+    Категория: <span itemprop="category" content="Оборудование > Инструменты > Наковальни" class="category">наковальни</span>
+    
+    Номер изделия: <span itemprop="identifier" class="identifier" content="mpn:925872">925872</span>
+    
+    <span itemprop="review" itemscope itemtype="http://data-vocabulary.org/Review-aggregate" class="review">
+        <span itemprop="rating" class="rating">4,4</span> на основе 
+        <span itemprop="count" class="count">89 </span> отзывов
+    </span>
+
+    <span itemprop="offerDetails" itemscope itemtype="http://data-vocabulary.org/Offer" class="offerDetails">
+        Обычная цена: 3999 руб.
+        <meta itemprop="currency" content="RUB" />
+        $<span itemprop="price" class="price">2999</span>
+        (только до <time itemprop="priceValidUntil" datetime="2020-11-05">5 ноября!</time>)
+        Продавец: <span itemprop="seller" class="seller">Эксклюзивные товары</span>
+        Состояние: <span itemprop="condition" content="used" class="condition">б/у, в отличном состоянии</span>
+        
+        <span itemprop="availability" content="in_stock" class="availability">В наличии! Заказывайте прямо сейчас!</span>
+    </span>
+</div>

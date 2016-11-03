@@ -1,0 +1,96 @@
+/* 
+    Created on : Jun 22, 2015, 5:00:56 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+.main-header{
+    .top-navbar{
+        @include box-sizing();
+        @include size(100%, $top-navbar-height);
+        @include flex-row-items-align(space-between, flex-start);
+        .top-navbar-left-bg, .top-navbar-right-bg{
+            @include box-sizing();
+            height: 100%;
+            @include lgscreen{
+                @include calc(width, "(100% - 1400px)/2"); 
+            }
+            @include mddesktop{
+                width: 0px; 
+                display: none;
+            }
+            @media screen and (max-width: 1420px) {
+                width: 0px; 
+                display: none;
+            }
+        }
+        .top-navbar-left-bg, .left-inner-wr{
+            background-color: $header_bg;
+        }
+        .top-navbar-right-bg, .right-inner-wr{
+            background-color: #000000;
+        }
+        .left-inner-wr{
+            @include flex-row-items-align(space-around, flex-start);
+            .lang{
+                @include box-sizing();
+                flex-basis: 20%;
+                line-height: $top-navbar-height;
+                @include smart{
+                    flex-basis: 0%;
+                    display: none;
+                }
+                a{
+                    display: inline-block;
+                    padding: 0px 10px;
+                    color: $lang-link-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font: #{$lang-link-font};
+                    &:hover{color:$lang-link-hover-color;}
+                    &.current{text-decoration: underline;}
+                }
+            }
+            
+        }
+        .right-inner-wr{
+            @include smart{
+                display: none;
+            }
+            .social-links{
+                position: relative;
+                @include flex-row-items-align(space-around, flex-start);
+                li{
+                    height: 40px;
+                    a{
+                        display: inline-block;
+                        @include size(35px, 40px);
+                        background: url("#{$image-sprite}") no-repeat transparent;
+                        &.fb-link{
+                            background-position:  -477px -72px;
+                        }
+                        &.twitter-link{
+                            background-position:  -573px -72px;
+                        }
+                        &.youtube-link{
+                            background-position:  -520px -72px;
+                        }
+                        
+                    }
+                }
+                
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top : 0px;
+                    right: -1px;
+                    @include size(1px, $top-navbar-height);
+                    background-color: #000000;
+                }
+            }
+        }
+        @include tablet{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+/* 
+    Created on : Jun 23, 2015, 6:53:38 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+/*main layout*/
+html{
+    @include size(100%, 100%);
+    min-height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+body{
+    @include size(100%, 100%);
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    @include flexbox();
+    @include flex-direction(column);
+    background-color: $body-bg;
+    font: #{$main-font};
+    font-size: 14px;
+    color: $main-font-color;
+}
+
+.main-header{
+    @include box-sizing();
+    @include flex(0, 0, auto);
+   
+}
+
+.main-content {
+    @include flex(1, 0, auto);
+   //@media (--break-lg) {
+        // padding-top: var(--space-lg);
+    //}
+    &:after{
+        content: '\00a0'; /* &nbsp; */
+        display: block;
+        //margin-top: $footer_height;
+        height: 0px;
+        visibility: hidden;
+        //@media (--break-lg) {
+            //margin-top: var(--space-lg);
+        //}
+    }
+}
+
+.main-footer{
+    position: relative;
+    @include box-sizing();
+    @include flex(0, 0, $footer_height);
+    background-color: $footer_bg;
+    overflow: hidden;
+}
+.main-content--full {
+  padding: 0;
+}
+.main-content--full::after {
+  content: none;
+}
+
+.inside-container{
+    position: relative;
+    @include box-sizing();
+    margin: 0 auto;
+    @include lgscreen{
+       width: $lgscreen-width;
+    }
+    @include mddesktop{
+        width: 100%;
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

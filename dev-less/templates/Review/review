@@ -1,0 +1,38 @@
+<div class="review-list">
+
+	<!--Формат Review - для сторінок, що містять лише окремі відгуки-->
+	<div class="item r h" itemscope itemtype="http://data-vocabulary.org/Review">
+		<span class="review-subject" itemprop="itemreviewed">Элемент, к которому относится отзыв. 
+                    Микроформаты могут включать имя элемента,
+                    к которому относится отзыв</span>
+            
+                <img itemprop="photo" src="#" />
+                
+		Автор: <span itemprop="reviewer" class="reviewer">Автор отзыва</span>
+		<time itemprop="dtreviewed" datetime="2009-01-06">6 января</time> 
+                
+		<span itemprop="summary">Краткая сводка отзыва.</span>
+                
+		<span itemprop="description" class="description">Текст отзыва.</span>
+                
+		Оценка: <span itemprop="rating" itemtype="http://data-vocabulary.org/Rating">4.5</span>
+                                                    
+	</div>
+        
+        <!--Формат Review-aggregate - для сторінок, що містять зведені відгуки-->
+        <div class="item r h" itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+                <span itemprop="itemreviewed">L’Amourita Pizza</span>
+                
+                <img itemprop="photo" src="pizza.jpg" />
+                
+                <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+                    
+                <span itemprop="average">9</span>
+                        из <span itemprop="best">10</span>
+                </span>
+                на основе <span itemprop="votes">24</span> оценок.
+                
+                <span itemprop="count">5</span> пользовательских отзывов.
+         </div>    
+
+</div>

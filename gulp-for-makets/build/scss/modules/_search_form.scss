@@ -1,0 +1,109 @@
+/* 
+    Created on : Jun 22, 2015, 5:00:56 PM
+    Author     : Ruslana Gorbachuk
+*/
+
+/*search form located in top navbar visible in desktop*/
+.top-navbar{
+    .search-form-wr{
+        @include box-sizing();
+        flex-basis: 80%;
+        height: 40px;
+        .culture-search{
+            @include size(50%, 30px);
+            margin: auto;
+            @include mddesktop{
+                 @include size(90%, 30px);
+                 max-width: 350px;
+            }
+            .search-field{
+               @include calc(width, "(100% - 40px)"); 
+                height: 30px;
+                margin: auto;
+                color: #ffffff;
+            }
+            .search-submit{
+                display: inline-block;
+                @include box-sizing();
+                border: none;
+                outline: none;
+                background: url("#{$image-sprite}") no-repeat -25px -72px transparent;
+                text-decoration: none;
+                text-align: center;
+                cursor: pointer;
+                @include size(35px, 30px);
+                text-indent: -9999px;
+                -webkit-appearance: none;
+            }
+        }        
+    }
+}
+/*search form located in main navigation block visible only in tablet and mobile*/
+.main-nav-block{
+    .search-form-wr{
+        display: none;
+        @include tablet{
+            @include flexbox();
+            @include flex-justify-content(center);
+            .culture-search-show{
+                display: none;
+                @include box-sizing();
+                background: url("#{$image-sprite}") no-repeat -600px -57px transparent;
+                text-align: center;
+                cursor: pointer;
+                @include size(60px, 45px);
+            }
+            .culture-search{
+                @include box-sizing();
+                @include size(100%, 45px);
+                .search-field{
+                   @include calc(width, "(100% - 70px)"); 
+                    height: 45px;
+                    margin: auto;
+                    color: $main-font-color;
+                    font-size: 16px;
+                    border-bottom: 2px solid $main-font-color;
+                }
+                .search-submit{
+                    display: inline-block;
+                    @include box-sizing();
+                    border: none;
+                    outline: none;
+                    background: url("#{$image-sprite}") no-repeat -600px -57px transparent;
+                    text-decoration: none;
+                    text-align: center;
+                    cursor: pointer;
+                    @include size(60px, 45px);
+                    text-indent: -9999px;
+                    -webkit-appearance: none;
+                }
+            }  
+        }
+        @include mobile{
+            @include flex-align-items(flex-end);
+            @include box-sizing();
+            .culture-search-show{display: inline-block;}
+            .culture-search{
+                display: none;
+                position: absolute;
+                height: 80px;
+                left: 0px;
+                z-index: 10;
+                top: 140px;
+                background-color: $pink-color;
+                padding: 15px;
+                @include mobile{top: 100px;}
+                .search-field{
+                    @include calc(width, "(100% - 65px)");
+                    border-bottom: 2px solid #ffffff;
+                    color: #ffffff;
+                    font-weight: bold;
+                }
+                .search-submit{
+                    background: url("#{$image-sprite}") no-repeat -650px -57px transparent;
+                }
+                
+            }
+        }
+    }
+}

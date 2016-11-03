@@ -1,0 +1,23 @@
+<div class="person" itemscope itemtype="http://data-vocabulary.org/Person">
+    Меня зовут <span class="name" itemprop="name">Боб Смит</span>, 
+    но друзья называют меня <span class="nickname" itemprop="nickname">Смитти</span>.
+    Вот моя домашняя страница: 
+    <a class="person-link" href="http://www.example.com" itemprop="url">www.example.com</a>.
+    Я живу в 
+    <span class="adress" itemprop="address" itemscope
+          itemtype="http://data-vocabulary.org/Address">
+        <span class="country-name" itemprop="country-name">США</span>,
+        <span class="locality" itemprop="locality">Альбукерке</span>, 
+        <span class="region" itemprop="region">штат Нью-Мексико</span>, 
+        <span class="street-address" itemprop="street-address">Street</span>,
+        <span class="postal-code" itemprop="postal-code">536235</span>			
+    </span>
+    и работаю <span class="job" itemprop="title">инженером</span>
+    в <span class="affiliation" itemprop="affiliation">ACME</span>.
+    Мои друзья:
+    <span class="my-friends">
+        <a href="http://darryl-blog.example.com" rel="friend">Дэррил</a>, 
+        <a href="http://edna-blog.example.com" rel="friend">Эдна</a>
+    </span>
+    <img class="person-photo" itemprop="photo" src="anvil_executive.jpg" />
+</div>

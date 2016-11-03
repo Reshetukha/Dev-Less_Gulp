@@ -1,0 +1,53 @@
+//@import 'mixins/_reset';
+//
+//@include global-reset();
+//
+///*parametres, functions, variables*/
+//
+//@import 'mixins/_font_face_mixin';
+//@import 'mixins/_general_mixins';
+//@import 'mixins/_flex_box_mixins';
+//@import 'mixins/_media_mixins';
+//@import 'mixins/_flex_grid';
+//
+///*base settings*/
+//@import '_parameters';
+//@import '_base';
+//
+///*buttons, forms elements etc.*/
+//@import 'partials/_elements';
+//
+///*base parts of page*/
+//@import 'partials/_top_navbar';
+//@import 'partials/_main_nav_block';
+//@import 'partials/_footer';
+//
+///*modules*/
+//@import 'modules/_search_form';
+//@import 'modules/_main_slider';
+//@import 'modules/_programme_topic_start';
+//@import 'modules/_news_list';
+//@import 'modules/_grunts_list_start';
+//@import 'modules/_breadcrumbs';
+//@import 'modules/_filters_panel';
+//@import 'modules/_other_relevant';
+//@import 'modules/_article';
+
+body {
+  background: red;
+  color: #с0с0с0;
+}
+
+.spritetest {
+  height: 100px;
+  width: 100px;
+  background: url(../imgcss/ico-21.png);
+  border: 1px solid white;
+}
+
+.spritetest1 {
+  height: 100px;
+  width: 100px;
+  background: url(../imgcss/ico-1.png);
+  border: 1px solid white;
+}

@@ -1,0 +1,6 @@
+assets/*
+upload_file/*
+protected/runtime/*
+.svn
+.svn/*
+/.svn

@@ -1,0 +1,57 @@
+.event{
+    .box-sizing();
+
+    a{
+        display: inline-block;
+        overflow: hidden;
+        .summary{
+            display: inline-block;
+        }
+    }
+    .event-image{
+        display: inline-block;
+    }
+    .description{
+         display: inline-block;
+    }
+    .date{
+
+    }
+    .location{
+         .location-name{
+
+         }
+         .location-address{
+
+         }
+    }
+    .event-type{
+
+    }
+    .ticketAggregate{
+
+        .low-price{
+
+        }
+        .high-price{
+
+        }
+        .currency{
+
+        }
+        .offerCount{
+
+        }
+        .offerViewLink{
+            span{
+
+            }
+        }
+        .tickets{
+             .offerurl-view{}
+             .price{}
+             .date{}
+        }
+
+    }
+}

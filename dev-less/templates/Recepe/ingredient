@@ -1,0 +1,7 @@
+    <span itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+      
+      <span class="name" itemprop="name">Сахар-песок</span>:     
+      
+      <span class="amount" itemprop="amount">3/4 стакана</span>
+   
+    </span>

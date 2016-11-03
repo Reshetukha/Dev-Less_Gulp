@@ -1,0 +1,21 @@
+<div class="video-container" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+        <h2 class="title">Video.Official Album<span itemprop="name">Pink Floyd: The Wall</span></h2>
+        <meta itemprop="duration" content="T1M33S" />
+        <meta itemprop="thumbnailUrl" content="thumbnail.jpg" />
+        <meta itemprop="contentUrl" content="http://www.example.com/video123.flv" />
+        <meta itemprop="embedUrl" content="http://www.example.com/videoplayer.swf?video=123" />
+        <meta itemprop="uploadDate" content="2011-07-05T08:00:00+08:00" />
+        <meta itemprop="expires" content="2012-01-30T19:00:00+08:00" />
+ 
+        <video width="1024" height="640" >
+
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+
+
+        <span class="video-description" itemprop="description">Catch this exclusive interview with
+        Dave Grohl and the Food Fighters about their new album, Rope.
+        </span>
+    </div>

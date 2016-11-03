@@ -1,0 +1,32 @@
+@import "../../less/elements.less";
+
+body{
+  width: 1024px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.video-container{
+      font: normal 400 16px/1.33 Arial, sans-serif;
+      color: #383a3a;
+      .box-sizing();
+
+      .title{
+           font-size: 18px;
+           text-transform: uppercase;
+           margin: 10px 0px;
+
+          .name{
+              color: #144e55;
+          }
+
+      }
+
+      .video-description{
+            background-color: #999999;
+            display: block;
+            margin: 0px 0px 10px 0px;
+            padding: 20px 10px;
+      }
+
+}

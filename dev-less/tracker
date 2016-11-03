@@ -1,0 +1,90 @@
+[ Sitemap ]
+    image.xml
+        image-readme.txt
+    news.xml
+        news-readme.txt
+    sitemap.xml
+        sitemap-readme.txt
+    video.xml
+        video-readme.txt
+    readme.txt
+
+[ Захист прав - Copyright ]
+    *copyright
+        *copyright.html
+        *copyright.less
+     *readme.txt
+
+[ Картки Adress ]
+   * address
+        * address.less
+    readme.txt
+
+[ Картки Music ]
+    *music
+       *music.html
+       *music.less
+    *music_record
+       *music_record.html
+        music_record.less
+    * readme.txt
+
+[ Картки Video ]
+    *video
+        *video.html
+        *video.less
+    *readme.txt
+
+[ Картки людей Person ]
+    * person
+        * person.less
+    *readme.txt
+
+[ Картки оцінок Rating ]
+    * rating
+        * rating.less
+    * rate_stars
+        * rate_stars.less
+    * readme.txt
+
+[ Сторінки Organisation ]
+    * organisation
+        * organisation.less
+    *readme.txt
+
+[ Сторінки Заходів Events ]
+    *events
+        *events.html
+        *events.less
+    *readme.txt
+
+[ Сторінки відгуків Review ]
+    *review
+       *review.html
+       *review.less
+    *readme.txt
+
+[ Сторінки новин News ]
+    *news-list
+        *news-list.less
+    *article
+       *article.less
+    *readme.txt
+
+[ Сторінки рецептів Recepe ]
+    *ingredient
+        *ingredient.less
+    *recepe
+        *recepe.less
+    *readme.txt
+
+[ Сторінки товарів Product ]
+    Currency codes - ISO 4217.xls
+    *product
+        *product.less
+    *readme.txt
+
+[ Стрічка навігації - Breadcrumbs ]
+    *breadcrumbs
+        *breadcrumbs.less
+    *readme.txt

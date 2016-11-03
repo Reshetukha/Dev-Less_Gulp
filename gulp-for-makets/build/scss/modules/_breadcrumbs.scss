@@ -1,0 +1,46 @@
+/* 
+    Created on : Jun 18, 2015, 11:52:28 AM
+    Author     : Ruslana Gorbachuk
+*/
+
+/******************************breadcrumps********************************/
+.breadcrumbs{
+    width: 100%;
+    padding: 0px 15px;
+    overflow: hidden;
+    @include box-sizing();
+    line-height: 60px;
+    @media screen and (max-width: 1024px) {display: none;}
+    .sep{
+        margin: 0 5px;
+        font-size: 14px;
+        font-family: 'DINPro-Medium', sans-serif;
+        color: lighten($main-font-color, 20%);
+    }
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        span{
+            @include word-wrap();
+            font-size: 14px;
+            font-family: 'DINPro-Medium', sans-serif;
+            color: lighten($main-font-color, 20%);
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+        &.current{
+            span{
+                color: $pink-font-color;
+            }
+        }
+    }
+    &.breadcrumbs-inside-article{
+        line-height: 25px;
+        a{
+            span{
+                font-size: 10px;
+            }
+        }
+    }
+}

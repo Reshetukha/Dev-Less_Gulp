@@ -1,0 +1,46 @@
+<section class="news-list">
+
+    <article class="h">
+        <div class="col thumb">
+                <a href="./news-item.html">
+                        <img src="./pic/DROP/1_thumb.jpg" />
+                </a>
+        </div>
+        <div class="col">
+
+            <time  datetime="2014-08-03">
+                08.03.2014
+            </time>
+
+            <header class="title">
+                <a href="./news-item.html">
+                    <span>Назва новини</span>
+                </a>
+            </header>
+
+            <!-- група новини, якщо є -->
+            <div class="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="#" itemprop="url">
+                    <span itemprop="title">Стартова</span>
+                </a>
+                <span class="sep">›</span>
+                <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="#" itemprop="url">
+                        <span itemprop="title">Новини</span>
+                    </a>
+                    <span class="sep">›</span>
+                    <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="#" itemprop="url">
+                            <span itemprop="title">Група новин</span>
+                        </a>
+                    </span>
+                </span>
+            </div>
+
+            Короткий опис
+            <a href="./news-item.html" class="detail"> detail </a>
+        </div>
+
+    </article>
+    
+</section>
